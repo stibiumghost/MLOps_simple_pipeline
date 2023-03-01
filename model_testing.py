@@ -26,3 +26,5 @@ for file in files:
 
 print(f'Combined ({len(y_test_all)} lines) accuracy score is', \
     accuracy_score(y_test_all, model.predict(X_test_all)))
+
+input() # wait for input to be able to check metrics
