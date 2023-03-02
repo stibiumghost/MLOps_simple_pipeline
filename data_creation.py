@@ -30,5 +30,4 @@ for name, group in zip(['X_train', 'X_test', 'y_train', 'y_test'], data):
     for i in range(1, 4):
         sq_end = int(sq_start + len(group) / 6 * i)
         np.savetxt(name + '_' + str(i), group[sq_start:sq_end], delimiter=',', fmt='%.3e')
-        print(sq_start, sq_end)
         sq_start = sq_end
