@@ -1,6 +1,6 @@
 # Simple machine learning pipeline 
 
-data_creation.py generates three two-dimensional binary classification datasets, each of witch split into two directories: train and test.
+data_creation.py generates three two-dimensional binary classification datasets, each of which split into two directories: train and test.
 
 get_files.py is a module that returns (X_file_n, y_file_n) for every pair in the folder.
 
