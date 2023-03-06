@@ -1,13 +1,9 @@
 # Simple machine learning pipeline 
 
-data_creation.py generates three two-dimensional binary classification datasets, each of which split into two directories: train and test.
+1. data_creation.py generates three datasets for binary classification using datasets.make_moons.
+2. model_preprocessing.py normalizes the data using preprocessing.StandardScaler.
+3. model_preparation.py trains and saves the model using neighbors.KNeighborsClassifier.
+4. model_testing.py makes predictions and evaluates their accuracy scores.
+5. pipeline.sh runs the scripts.
 
-get_files.py is a module that returns (X_file_n, y_file_n) for every pair in the folder.
-
-model_preprocessing.py performs preprocessing of data by using sklearn.preprocessing.StandardScaler.
-
-model_preparation.py performs KNeighborsClassifier model training and save it as model.txt.
-
-model_testing.py gets a predictions and accuracy scores to test datasets.
-
-pipeline.sh runs all python-scripts sequentially.
+*get_files.py returns file names in a folder when called.
