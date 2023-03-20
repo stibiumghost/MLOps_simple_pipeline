@@ -35,5 +35,3 @@ np.savetxt('predict/X_test_all_predict', prediction_all, delimiter=',', fmt='%.3
 
 print(f'Combined ({len(y_test_all)} lines) accuracy score is', \
     accuracy_score(y_test_all, prediction_all))
-
-input() # wait for input to be able to check metrics
