@@ -8,7 +8,7 @@ def generate_image(text, mdjrny):
     return picture_gen(text)
 
 if __name__ == '__main__':
-    picture_gen = gr.Blocks.load(name='models/prompthero/openjourney')    # Stable Diffusion model for image generation
+    picture_gen = gr.load(name='models/prompthero/openjourney')    # Stable Diffusion model for image generation
 
     with gr.Blocks() as image_generator:
         with gr.Row():
@@ -27,6 +27,6 @@ if __name__ == '__main__':
             with gr.Column(scale=1):
                 pass
 
-        btn.click(generate_image, inputs=[seed, mdjrny], outputs=[my_image], api_name='api') #http://0.0.0.0:7860/run/api
+        btn.click(generate_image, inputs=[seed, mdjrny], outputs=[my_image], api_name='api') #http://0.0.0.0:8080/run/api
 
-    image_generator.launch(server_name='0.0.0.0')
+    image_generator.launch(server_name='0.0.0.0', server_port=8080)

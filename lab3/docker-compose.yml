@@ -1,0 +1,10 @@
+version: '1'
+
+services:
+  image_generator:
+    build: .
+    container_name: image_generator
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/app
