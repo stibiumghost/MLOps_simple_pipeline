@@ -1,6 +1,6 @@
 import subprocess
 
-# Retrieve Git commit SHA
+#  Retrieve Git commit SHA
 commit_sha = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode('utf-8').strip()
 
 # Retrieve Git branch name
