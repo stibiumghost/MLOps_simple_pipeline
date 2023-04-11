@@ -3,7 +3,7 @@ import subprocess
 #  Retrieve Git commit SHA
 commit_sha = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode('utf-8').strip()
 
-# Retrieve Git branch name
+#  Retrieve Git branch name
 branch_name = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD']).decode('utf-8').strip()
 
 # Build Docker image
