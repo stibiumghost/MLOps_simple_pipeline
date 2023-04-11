@@ -5,6 +5,7 @@ from get_files import file_names
 
 
 files = file_names('train')
+print(files)
 model = KNeighborsClassifier(n_neighbors=5)
 
 
