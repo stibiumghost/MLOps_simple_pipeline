@@ -1,5 +1,8 @@
+import os
 import subprocess
 
+print("build starting...")
+os.chdir("C:\Maga\MLOps\MLOps_simple_pipeline\lab3")
 #  Retrieve Git commit SHA
 commit_sha = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode('utf-8').strip()
 
@@ -9,7 +12,7 @@ branch_name = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD
 # Build Docker image
 subprocess.run(['docker', 'build', '-t', f'test_app:{branch_name}-{commit_sha}', '.'], check=True)
 
-# Tag Docker image
+#  Tag Docker image
 subprocess.run(['docker', 'tag', f'test_app:{branch_name}-{commit_sha}', f'noktos/test_app:{branch_name}-{commit_sha}'], check=True)
 
 # Push Docker image
