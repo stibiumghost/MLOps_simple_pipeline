@@ -7,5 +7,3 @@ train_df, test_df = titanic()
 # Save the training and testing data frames as CSV files
 train_df.to_csv("train_df.csv", index=False)
 test_df.to_csv("test_df.csv", index=False)
-
-print('done')
