@@ -1,0 +1,4 @@
+outs:
+- md5: dbd04a6285231d302dfea7dcae94d40c
+  size: 15533
+  path: titanic_df.csv
